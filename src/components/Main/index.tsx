@@ -1,9 +1,13 @@
 import * as S from "./styles";
 
-const Main = () => {
+const Main = ({
+  title = "CRA Boilerplate",
+  description = "TypeScript, ReactJS e Styled Components"
+}) => {
   return (
     <S.Wrapper>
-      <h1>Main</h1>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description}</S.Description>
     </S.Wrapper>
   );
 };

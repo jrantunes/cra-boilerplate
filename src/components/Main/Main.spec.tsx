@@ -4,8 +4,12 @@ import Main from ".";
 
 describe("<Main />", () => {
   it("should render the heading", () => {
-    render(<Main />);
+    const { container } = render(<Main />);
 
-    expect(screen.getByRole("heading", { name: /Main/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /CRA Boilerplate/i })
+    ).toBeInTheDocument();
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
